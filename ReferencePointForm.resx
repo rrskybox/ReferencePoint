@@ -121,11 +121,11 @@
     <value>False</value>
   </metadata>
   <data name="Label4.Text" xml:space="preserve">
-    <value> A. Open the "Input-&gt;Create Sky Database" window.
-   B. Select the "Choose" button beside "Source Text File"
-   C. Click on "My Reference Point SDB.txt" and "Open"
-   D. Select the "Compile" tab
-   E. Click on "Create SDB from text file"
-   F. Close the window</value>
+    <value>A. Open the "Input-&gt;Create Sky Database" window.
+B. Select the "Choose" button beside "Source Text File"
+C. Click on "&lt;Reference Point Name&gt; SDB.txt" and "Open"
+D. Select the "Compile" tab
+E. Click on "Create SDB from text file"
+F. Close the window</value>
   </data>
 </root>

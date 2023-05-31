@@ -151,7 +151,7 @@ Partial Class ReferencePointForm
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(15, 25)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(283, 78)
+        Me.Label4.Size = New System.Drawing.Size(290, 78)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = resources.GetString("Label4.Text")
         '

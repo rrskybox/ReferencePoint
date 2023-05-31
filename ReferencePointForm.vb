@@ -24,17 +24,21 @@ Imports System.Reflection
 
 Public Class ReferencePointForm
 
-    'Dim TSXDir As String = "\Documents\Software Bisque\TheSky Professional Edition 64\SDBs\Reference Point SDB.txt"
+    'Dim TSXDir As String = "\Documents\Software Bisque\TheSky Professional Edition 64\SDBs\"
     'Dim TSXObj As String = "TheSky64."
-    Dim TSXDir As String = "\Documents\Software Bisque\TheSkyX Professional Edition\SDBs\Reference Point SDB.txt"
+    Dim TSXDir As String = "\Documents\Software Bisque\TheSkyX Professional Edition\SDBs\"
     Dim TSXObj As String = "TheSkyX."
 
     Private Sub BuildButton_Click(sender As Object, e As EventArgs) Handles BuildButton.Click
         'Reads in the embedded text file "MyFlatFieldSDB.txt", changes the Alt and Az fields
         '  then rewrites it back out to the SoftwareBisque SDBs folder
 
+        If (RefPntName.Text = "") Then
+            Return
+        End If
+
         'Installs the dbq file
-        Dim FFDestinationPath As String = "C:\Users\" + System.Environment.UserName + TSXDir
+        Dim FFDestinationPath As String = "C:\Users\" + System.Environment.UserName + TSXDir + RefPntName.Text + " SDB.txt"
         Dim fdstream As Stream
         Dim dassembly As [Assembly]
 
@@ -48,19 +52,18 @@ Public Class ReferencePointForm
         '
         'Fill in fields and output to file
         Dim fe As New SDB_Node
-        If (RefPntName.Text = "") Then Return
 
         fe.Label = RefPntName.Text
-        fe.raHours = AzimuthBox.Value.ToString("G")
-        fe.decDegrees = AltitudeBox.Value.ToString("G")
-        fe.ObjType = "Reference Point"
-        fe.MaxFOV = "100"
-        fe.MinFOV = "0"
+            fe.raHours = AzimuthBox.Value.ToString("G")
+            fe.decDegrees = AltitudeBox.Value.ToString("G")
+            fe.ObjType = "Reference Point"
+            fe.MaxFOV = "100"
+            fe.MinFOV = "0"
 
-        Dim fstring = fe.Entry()
-        My.Computer.FileSystem.WriteAllText(FFDestinationPath, fstring, True)
+            Dim fstring = fe.Entry()
+            My.Computer.FileSystem.WriteAllText(FFDestinationPath, fstring, True)
 
-        Return
+            Return
     End Sub
 
     Private Sub Download_Click(sender As Object, e As EventArgs) Handles DownloadButton.Click
