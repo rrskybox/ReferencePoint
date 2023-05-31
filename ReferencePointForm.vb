@@ -21,6 +21,7 @@ Imports System.Linq.Expressions
 '
 Imports System.Reflection
 
+
 Public Class ReferencePointForm
 
     Dim TSXDir As String = "\Documents\Software Bisque\TheSky Professional Edition 64\SDBs\Reference Point SDB.txt"
@@ -31,7 +32,6 @@ Public Class ReferencePointForm
     Private Sub BuildButton_Click(sender As Object, e As EventArgs) Handles BuildButton.Click
         'Reads in the embedded text file "MyFlatFieldSDB.txt", changes the Alt and Az fields
         '  then rewrites it back out to the SoftwareBisque SDBs folder
-
 
         'Installs the dbq file
         Dim FFDestinationPath As String = "C:\Users\" + System.Environment.UserName + TSXDir
@@ -78,14 +78,20 @@ Public Class ReferencePointForm
         Return
     End Sub
 
-    Private Sub ButtonUp_Click(sender As Object, e As EventArgs) Handles ButtonUp.Click
-        'Done
+    Private Sub QuitButton_Click(sender As Object, e As EventArgs) Handles QuitButton.Click
         Close()
         Return
     End Sub
 
-    Private Sub FlatPointerForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Return
+    Private Sub AlwaysOnTopCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles AlwaysOnTopCheckBox.CheckedChanged
+        If (AlwaysOnTopCheckBox.Checked) Then
+            My.Settings.AlwaysOnTop = True
+
+        Else
+            My.Settings.AlwaysOnTop = False
+        End If
+        My.Settings.Save()
+        Me.TopMost = My.Settings.AlwaysOnTop
     End Sub
 
 End Class

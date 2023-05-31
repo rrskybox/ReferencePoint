@@ -37,10 +37,11 @@ Partial Class ReferencePointForm
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ButtonUp = New System.Windows.Forms.Button()
+        Me.QuitButton = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.AlwaysOnTopCheckBox = New System.Windows.Forms.CheckBox()
         GroupBox5 = New System.Windows.Forms.GroupBox()
         GroupBox5.SuspendLayout()
         CType(Me.AzimuthBox, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -182,14 +183,14 @@ Partial Class ReferencePointForm
         Me.Label7.Text = "This reference point location is now available by using" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " the ""Find"" function in " &
     "TSX."
         '
-        'ButtonUp
+        'QuitButton
         '
-        Me.ButtonUp.Location = New System.Drawing.Point(138, 403)
-        Me.ButtonUp.Name = "ButtonUp"
-        Me.ButtonUp.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonUp.TabIndex = 14
-        Me.ButtonUp.Text = "Quit"
-        Me.ButtonUp.UseVisualStyleBackColor = True
+        Me.QuitButton.Location = New System.Drawing.Point(261, 400)
+        Me.QuitButton.Name = "QuitButton"
+        Me.QuitButton.Size = New System.Drawing.Size(75, 23)
+        Me.QuitButton.TabIndex = 14
+        Me.QuitButton.Text = "Quit"
+        Me.QuitButton.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -231,15 +232,26 @@ Partial Class ReferencePointForm
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Step 4:  In TSX"
         '
+        'AlwaysOnTopCheckBox
+        '
+        Me.AlwaysOnTopCheckBox.AutoSize = True
+        Me.AlwaysOnTopCheckBox.Location = New System.Drawing.Point(21, 406)
+        Me.AlwaysOnTopCheckBox.Name = "AlwaysOnTopCheckBox"
+        Me.AlwaysOnTopCheckBox.Size = New System.Drawing.Size(98, 17)
+        Me.AlwaysOnTopCheckBox.TabIndex = 19
+        Me.AlwaysOnTopCheckBox.Text = "Always On Top"
+        Me.AlwaysOnTopCheckBox.UseVisualStyleBackColor = True
+        '
         'ReferencePointForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(349, 435)
+        Me.Controls.Add(Me.AlwaysOnTopCheckBox)
         Me.Controls.Add(GroupBox5)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.ButtonUp)
+        Me.Controls.Add(Me.QuitButton)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "ReferencePointForm"
@@ -269,10 +281,11 @@ Partial Class ReferencePointForm
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents ButtonUp As System.Windows.Forms.Button
+    Friend WithEvents QuitButton As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
     Friend WithEvents Label9 As Label
     Friend WithEvents RefPntName As TextBox
+    Friend WithEvents AlwaysOnTopCheckBox As CheckBox
 End Class
