@@ -47,23 +47,29 @@ Public Class ReferencePointForm
         fdstream = dassembly.GetManifestResourceStream("ReferencePoint.ReferencePointSDB.txt")
         Dim fdstreamreader = New StreamReader(fdstream)
         Dim dstring = fdstreamreader.ReadToEnd()
-
-        My.Computer.FileSystem.WriteAllText(FFDestinationPath, (dstring + vbCrLf), False)
+        'Create header to the header the hard way:
+        Dim hstring = "<?xml version=""1.0""?>" + Environment.NewLine +
+                      "<!DOCTYPE TheSkyDatabase>" + Environment.NewLine +
+                      "<TheSkyDatabaseHeader version = ""1.00"">" + Environment.NewLine +
+                       "    <identifier>" + RefPntName.Text + "</identifier>" + Environment.NewLine +
+                       "    <sdbDescription>" + RefPntName.Text + " Reference Point" + Environment.NewLine
+        Dim allString = hstring + dstring + Environment.NewLine
+        My.Computer.FileSystem.WriteAllText(FFDestinationPath, allString, False)
         '
         'Fill in fields and output to file
         Dim fe As New SDB_Node
 
         fe.Label = RefPntName.Text
-            fe.raHours = AzimuthBox.Value.ToString("G")
-            fe.decDegrees = AltitudeBox.Value.ToString("G")
-            fe.ObjType = "Reference Point"
-            fe.MaxFOV = "100"
-            fe.MinFOV = "0"
+        fe.raHours = AzimuthBox.Value.ToString("G")
+        fe.decDegrees = AltitudeBox.Value.ToString("G")
+        fe.ObjType = "Reference Point"
+        fe.MaxFOV = "100"
+        fe.MinFOV = "0"
 
-            Dim fstring = fe.Entry()
-            My.Computer.FileSystem.WriteAllText(FFDestinationPath, fstring, True)
+        Dim fstring = fe.Entry()
+        My.Computer.FileSystem.WriteAllText(FFDestinationPath, fstring, True)
 
-            Return
+        Return
     End Sub
 
     Private Sub Download_Click(sender As Object, e As EventArgs) Handles DownloadButton.Click

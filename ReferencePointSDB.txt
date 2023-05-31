@@ -1,9 +1,4 @@
-﻿<?xml version="1.0"?>
-<!DOCTYPE TheSkyDatabase>
-<TheSkyDatabaseHeader version="1.00">
-    <identifier>My Flat Field</identifier>
-    <sdbDescription>Flat Field Target
-</sdbDescription>
+﻿</sdbDescription>
     <searchPrefix></searchPrefix>
     <specialSDB>0</specialSDB>
     <plotObjects>1</plotObjects>
