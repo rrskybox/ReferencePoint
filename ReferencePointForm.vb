@@ -24,10 +24,10 @@ Imports System.Reflection
 
 Public Class ReferencePointForm
 
-    Dim TSXDir As String = "\Documents\Software Bisque\TheSky Professional Edition 64\SDBs\Reference Point SDB.txt"
-    Dim TSXObj As String = "TheSky64."
-    'Dim TSXDir As String = "\Documents\Software Bisque\TheSkyX Professional Edition\SDBs\Reference Point SDB.txt"
-    'Dim TSXObj As String = "TheSkyX."
+    'Dim TSXDir As String = "\Documents\Software Bisque\TheSky Professional Edition 64\SDBs\Reference Point SDB.txt"
+    'Dim TSXObj As String = "TheSky64."
+    Dim TSXDir As String = "\Documents\Software Bisque\TheSkyX Professional Edition\SDBs\Reference Point SDB.txt"
+    Dim TSXObj As String = "TheSkyX."
 
     Private Sub BuildButton_Click(sender As Object, e As EventArgs) Handles BuildButton.Click
         'Reads in the embedded text file "MyFlatFieldSDB.txt", changes the Alt and Az fields
