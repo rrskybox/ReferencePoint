@@ -22,8 +22,10 @@ Partial Class ReferencePointForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReferencePointForm))
         Dim GroupBox5 As System.Windows.Forms.GroupBox
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReferencePointForm))
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.RefPntName = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.AzimuthBox = New System.Windows.Forms.NumericUpDown()
         Me.AltitudeBox = New System.Windows.Forms.NumericUpDown()
@@ -39,16 +41,42 @@ Partial Class ReferencePointForm
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.RefPntName = New System.Windows.Forms.TextBox()
         GroupBox5 = New System.Windows.Forms.GroupBox()
+        GroupBox5.SuspendLayout()
         CType(Me.AzimuthBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AltitudeBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        GroupBox5.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'GroupBox5
+        '
+        GroupBox5.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        GroupBox5.Controls.Add(Me.Label9)
+        GroupBox5.Controls.Add(Me.RefPntName)
+        GroupBox5.Location = New System.Drawing.Point(16, 7)
+        GroupBox5.Name = "GroupBox5"
+        GroupBox5.Size = New System.Drawing.Size(320, 43)
+        GroupBox5.TabIndex = 18
+        GroupBox5.TabStop = False
+        GroupBox5.Text = "Step 1"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(22, 21)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(143, 13)
+        Me.Label9.TabIndex = 11
+        Me.Label9.Text = "Enter Reference Point Name"
+        '
+        'RefPntName
+        '
+        Me.RefPntName.Location = New System.Drawing.Point(171, 17)
+        Me.RefPntName.Name = "RefPntName"
+        Me.RefPntName.Size = New System.Drawing.Size(138, 20)
+        Me.RefPntName.TabIndex = 10
         '
         'Label1
         '
@@ -203,35 +231,7 @@ Partial Class ReferencePointForm
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Step 4:  In TSX"
         '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(22, 21)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(143, 13)
-        Me.Label9.TabIndex = 11
-        Me.Label9.Text = "Enter Reference Point Name"
-        '
-        'RefPntName
-        '
-        Me.RefPntName.Location = New System.Drawing.Point(171, 17)
-        Me.RefPntName.Name = "RefPntName"
-        Me.RefPntName.Size = New System.Drawing.Size(138, 20)
-        Me.RefPntName.TabIndex = 10
-        '
-        'GroupBox5
-        '
-        GroupBox5.BackColor = System.Drawing.SystemColors.GradientActiveCaption
-        GroupBox5.Controls.Add(Me.Label9)
-        GroupBox5.Controls.Add(Me.RefPntName)
-        GroupBox5.Location = New System.Drawing.Point(16, 7)
-        GroupBox5.Name = "GroupBox5"
-        GroupBox5.Size = New System.Drawing.Size(320, 43)
-        GroupBox5.TabIndex = 18
-        GroupBox5.TabStop = False
-        GroupBox5.Text = "Step 1"
-        '
-        'FlatPointerForm
+        'ReferencePointForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -242,8 +242,10 @@ Partial Class ReferencePointForm
         Me.Controls.Add(Me.ButtonUp)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Name = "FlatPointerForm"
-        Me.Text = "Flat Pointer"
+        Me.Name = "ReferencePointForm"
+        Me.Text = "Reference Point"
+        GroupBox5.ResumeLayout(False)
+        GroupBox5.PerformLayout()
         CType(Me.AzimuthBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AltitudeBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
@@ -252,8 +254,6 @@ Partial Class ReferencePointForm
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
-        GroupBox5.ResumeLayout(False)
-        GroupBox5.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
