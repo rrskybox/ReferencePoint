@@ -23,9 +23,12 @@ Partial Class ReferencePointForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim GroupBox5 As System.Windows.Forms.GroupBox
+        Dim GroupBox4 As System.Windows.Forms.GroupBox
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ReferencePointForm))
         Me.Label9 = New System.Windows.Forms.Label()
         Me.RefPntName = New System.Windows.Forms.TextBox()
+        Me.TrackingOffButton = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.AzimuthBox = New System.Windows.Forms.NumericUpDown()
         Me.AltitudeBox = New System.Windows.Forms.NumericUpDown()
@@ -43,7 +46,9 @@ Partial Class ReferencePointForm
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.AlwaysOnTopCheckBox = New System.Windows.Forms.CheckBox()
         GroupBox5 = New System.Windows.Forms.GroupBox()
+        GroupBox4 = New System.Windows.Forms.GroupBox()
         GroupBox5.SuspendLayout()
+        GroupBox4.SuspendLayout()
         CType(Me.AzimuthBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AltitudeBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -66,7 +71,7 @@ Partial Class ReferencePointForm
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(22, 21)
+        Me.Label9.Location = New System.Drawing.Point(22, 17)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(143, 13)
         Me.Label9.TabIndex = 11
@@ -74,10 +79,40 @@ Partial Class ReferencePointForm
         '
         'RefPntName
         '
-        Me.RefPntName.Location = New System.Drawing.Point(171, 17)
+        Me.RefPntName.Location = New System.Drawing.Point(176, 13)
         Me.RefPntName.Name = "RefPntName"
         Me.RefPntName.Size = New System.Drawing.Size(138, 20)
         Me.RefPntName.TabIndex = 10
+        '
+        'GroupBox4
+        '
+        GroupBox4.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        GroupBox4.Controls.Add(Me.TrackingOffButton)
+        GroupBox4.Controls.Add(Me.Label8)
+        GroupBox4.Location = New System.Drawing.Point(16, 56)
+        GroupBox4.Name = "GroupBox4"
+        GroupBox4.Size = New System.Drawing.Size(320, 48)
+        GroupBox4.TabIndex = 19
+        GroupBox4.TabStop = False
+        GroupBox4.Text = "Step 2"
+        '
+        'TrackingOffButton
+        '
+        Me.TrackingOffButton.Location = New System.Drawing.Point(234, 10)
+        Me.TrackingOffButton.Name = "TrackingOffButton"
+        Me.TrackingOffButton.Size = New System.Drawing.Size(75, 29)
+        Me.TrackingOffButton.TabIndex = 10
+        Me.TrackingOffButton.Text = "Tracking Off"
+        Me.TrackingOffButton.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(22, 18)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(185, 13)
+        Me.Label8.TabIndex = 11
+        Me.Label8.Text = "Turn Tracking off for Fixed Reference"
         '
         'Label1
         '
@@ -129,7 +164,7 @@ Partial Class ReferencePointForm
         '
         'DownloadButton
         '
-        Me.DownloadButton.Location = New System.Drawing.Point(234, 25)
+        Me.DownloadButton.Location = New System.Drawing.Point(232, 14)
         Me.DownloadButton.Name = "DownloadButton"
         Me.DownloadButton.Size = New System.Drawing.Size(75, 45)
         Me.DownloadButton.TabIndex = 6
@@ -139,12 +174,12 @@ Partial Class ReferencePointForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 25)
+        Me.Label3.Location = New System.Drawing.Point(46, 18)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(185, 39)
+        Me.Label3.Size = New System.Drawing.Size(162, 39)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Use the handpaddle (or StarChart)" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "to center your mount on the reference" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "point, " &
-    "then press:"
+        Me.Label3.Text = "Use the handpaddle or StarChart" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "to center your mount on the" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "reference point, th" &
+    "en press:"
         '
         'Label4
         '
@@ -177,7 +212,7 @@ Partial Class ReferencePointForm
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(14, 383)
+        Me.Label7.Location = New System.Drawing.Point(15, 435)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(327, 32)
         Me.Label7.TabIndex = 11
@@ -186,7 +221,7 @@ Partial Class ReferencePointForm
         '
         'QuitButton
         '
-        Me.QuitButton.Location = New System.Drawing.Point(261, 415)
+        Me.QuitButton.Location = New System.Drawing.Point(262, 467)
         Me.QuitButton.Name = "QuitButton"
         Me.QuitButton.Size = New System.Drawing.Size(75, 23)
         Me.QuitButton.TabIndex = 14
@@ -203,40 +238,40 @@ Partial Class ReferencePointForm
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.AzimuthBox)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(16, 56)
+        Me.GroupBox1.Location = New System.Drawing.Point(18, 112)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(321, 143)
+        Me.GroupBox1.Size = New System.Drawing.Size(321, 139)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Step 2"
+        Me.GroupBox1.Text = "Step 3"
         '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.BuildButton)
-        Me.GroupBox2.Location = New System.Drawing.Point(17, 205)
+        Me.GroupBox2.Location = New System.Drawing.Point(18, 257)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(320, 52)
         Me.GroupBox2.TabIndex = 16
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Step 3"
+        Me.GroupBox2.Text = "Step 4"
         '
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.GroupBox3.Controls.Add(Me.Label4)
-        Me.GroupBox3.Location = New System.Drawing.Point(17, 263)
+        Me.GroupBox3.Location = New System.Drawing.Point(18, 315)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(320, 117)
         Me.GroupBox3.TabIndex = 17
         Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Step 4:  In TSX"
+        Me.GroupBox3.Text = "Step 5:  In TSX"
         '
         'AlwaysOnTopCheckBox
         '
         Me.AlwaysOnTopCheckBox.AutoSize = True
-        Me.AlwaysOnTopCheckBox.Location = New System.Drawing.Point(21, 421)
+        Me.AlwaysOnTopCheckBox.Location = New System.Drawing.Point(22, 473)
         Me.AlwaysOnTopCheckBox.Name = "AlwaysOnTopCheckBox"
         Me.AlwaysOnTopCheckBox.Size = New System.Drawing.Size(98, 17)
         Me.AlwaysOnTopCheckBox.TabIndex = 19
@@ -247,7 +282,8 @@ Partial Class ReferencePointForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(349, 447)
+        Me.ClientSize = New System.Drawing.Size(349, 498)
+        Me.Controls.Add(GroupBox4)
         Me.Controls.Add(Me.AlwaysOnTopCheckBox)
         Me.Controls.Add(GroupBox5)
         Me.Controls.Add(Me.GroupBox3)
@@ -259,6 +295,8 @@ Partial Class ReferencePointForm
         Me.Text = "Reference Point"
         GroupBox5.ResumeLayout(False)
         GroupBox5.PerformLayout()
+        GroupBox4.ResumeLayout(False)
+        GroupBox4.PerformLayout()
         CType(Me.AzimuthBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AltitudeBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
@@ -289,4 +327,6 @@ Partial Class ReferencePointForm
     Friend WithEvents Label9 As Label
     Friend WithEvents RefPntName As TextBox
     Friend WithEvents AlwaysOnTopCheckBox As CheckBox
+    Friend WithEvents TrackingOffButton As Button
+    Friend WithEvents Label8 As Label
 End Class

@@ -120,6 +120,9 @@
   <metadata name="GroupBox5.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="GroupBox4.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <data name="Label4.Text" xml:space="preserve">
     <value>A. Open the "Input-&gt;Create Sky Database" window.
 B. Select the "Choose" button beside "Source Text File"
