@@ -67,6 +67,6 @@
 # 
 ###############################################################################
 
-#*.manifest binary
-#*.application binary
-#*.deploy binary
+*.manifest binary
+*.application binary
+*.deploy binary
