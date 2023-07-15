@@ -61,3 +61,12 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
+
+###############################################################################
+# Settings for ClickOnce installation from GitHub
+# 
+###############################################################################
+
+*.manifest binary
+*.application binary
+*.deploy binary
