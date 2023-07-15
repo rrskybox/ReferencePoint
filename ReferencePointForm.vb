@@ -64,7 +64,7 @@ Public Class ReferencePointForm
         fe.raHours = AzimuthBox.Value.ToString("G")
         fe.decDegrees = AltitudeBox.Value.ToString("G")
         fe.ObjType = "Reference Point"
-        fe.MaxFOV = "100"
+        fe.MaxFOV = "360"
         fe.MinFOV = "0"
 
         Dim fstring = fe.Entry()
@@ -76,7 +76,7 @@ Public Class ReferencePointForm
     Private Sub Download_Click(sender As Object, e As EventArgs) Handles DownloadButton.Click
         'Gets the current az/alt coordinates from TSX and stroes them in the form variables
         'If the special name "FINDHOME" is used, then the coordinates are assiged using the HA=2, Dec 0 coordinates
-        If (RefPntName.Text = "FINDHOME") Then
+        If (RefPntName.Text.Contains("HOME M")) Then
             FindHomeSpecial()
             Return
         End If
