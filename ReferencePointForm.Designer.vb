@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class ReferencePointForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class ReferencePointForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim GroupBox5 As System.Windows.Forms.GroupBox
         Dim GroupBox4 As System.Windows.Forms.GroupBox
@@ -184,9 +184,9 @@ Partial Class ReferencePointForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(15, 25)
+        Me.Label4.Location = New System.Drawing.Point(13, 16)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(290, 78)
+        Me.Label4.Size = New System.Drawing.Size(296, 143)
         Me.Label4.TabIndex = 8
         Me.Label4.Text = resources.GetString("Label4.Text")
         '
@@ -212,7 +212,7 @@ Partial Class ReferencePointForm
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(15, 435)
+        Me.Label7.Location = New System.Drawing.Point(15, 498)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(327, 32)
         Me.Label7.TabIndex = 11
@@ -221,7 +221,7 @@ Partial Class ReferencePointForm
         '
         'QuitButton
         '
-        Me.QuitButton.Location = New System.Drawing.Point(262, 467)
+        Me.QuitButton.Location = New System.Drawing.Point(262, 530)
         Me.QuitButton.Name = "QuitButton"
         Me.QuitButton.Size = New System.Drawing.Size(75, 23)
         Me.QuitButton.TabIndex = 14
@@ -263,7 +263,7 @@ Partial Class ReferencePointForm
         Me.GroupBox3.Controls.Add(Me.Label4)
         Me.GroupBox3.Location = New System.Drawing.Point(18, 315)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(320, 117)
+        Me.GroupBox3.Size = New System.Drawing.Size(320, 170)
         Me.GroupBox3.TabIndex = 17
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Step 5:  In TSX"
@@ -271,7 +271,7 @@ Partial Class ReferencePointForm
         'AlwaysOnTopCheckBox
         '
         Me.AlwaysOnTopCheckBox.AutoSize = True
-        Me.AlwaysOnTopCheckBox.Location = New System.Drawing.Point(22, 473)
+        Me.AlwaysOnTopCheckBox.Location = New System.Drawing.Point(22, 536)
         Me.AlwaysOnTopCheckBox.Name = "AlwaysOnTopCheckBox"
         Me.AlwaysOnTopCheckBox.Size = New System.Drawing.Size(98, 17)
         Me.AlwaysOnTopCheckBox.TabIndex = 19
@@ -282,7 +282,7 @@ Partial Class ReferencePointForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(349, 498)
+        Me.ClientSize = New System.Drawing.Size(349, 559)
         Me.Controls.Add(GroupBox4)
         Me.Controls.Add(Me.AlwaysOnTopCheckBox)
         Me.Controls.Add(GroupBox5)

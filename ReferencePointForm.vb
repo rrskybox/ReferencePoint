@@ -1,5 +1,7 @@
 ﻿Imports System.IO
 Imports System.Linq.Expressions
+Imports System.Net.Mime.MediaTypeNames
+
 
 'Windows Visual Basic Forms Application: Reference Point
 '
@@ -69,7 +71,7 @@ Public Class ReferencePointForm
 
         Dim fstring = fe.Entry()
         My.Computer.FileSystem.WriteAllText(FFDestinationPath, fstring, True)
-
+        Clipboard.SetText(allString + fstring)
         Return
     End Sub
 

@@ -124,11 +124,17 @@
     <value>False</value>
   </metadata>
   <data name="Label4.Text" xml:space="preserve">
-    <value>A. Open the "Input-&gt;Create Sky Database" window.
-B. Select the "Choose" button beside "Source Text File"
-C. Click on "&lt;Reference Point Name&gt; SDB.txt" and "Open"
-D. Select the "Compile" tab
-E. Click on "Create SDB from text file"
-F. Close the window</value>
+    <value>From text file (permanent)
+  A. Open the "Input-&gt;Create Sky Database" window.
+  B. Select the "Choose" button beside "Source Text File"
+  C. Click on "&lt;Reference Point Name&gt; SDB.txt" and "Open"
+  D. Select the "Compile" tab
+  E. Click on "Create SDB from text file"
+  F. Close the window
+
+Note:  The Reference Point will also be written to the
+Clipboard such that the user can load the point as a
+temporary location using Edit-&gt;Paste Photo.
+</value>
   </data>
 </root>
