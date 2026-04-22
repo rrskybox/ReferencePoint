@@ -28,9 +28,12 @@ Imports System.Security.Cryptography
 Public Class ReferencePointForm
 
     Dim TSXDir As String = "\Documents\Software Bisque\TheSky Professional Edition 64\SDBs\"
+    Dim DocDir As String = "\Software Bisque\TheSky Professional Edition 64\SDBs\"
     Dim TSXObj As String = "TheSky64."
     'Dim TSXDir As String = "\Documents\Software Bisque\TheSkyX Professional Edition\SDBs\"
     'Dim TSXObj As String = "TheSkyX."
+
+
 
     Private Sub BuildButton_Click(sender As Object, e As EventArgs) Handles BuildButton.Click
         'Reads in the embedded text file "MyFlatFieldSDB.txt", changes the Alt and Az fields
@@ -41,7 +44,11 @@ Public Class ReferencePointForm
         End If
 
         'Installs the dbq file
-        Dim FFDestinationPath As String = "C:\Users\" + System.Environment.UserName + TSXDir + RefPntName.Text + " SDB.txt"
+        Dim sdbPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + DocDir
+
+        'Dim FFDestinationPath As String = "C:\Users\" + System.Environment.UserName + TSXDir + RefPntName.Text + "SDB.txt"
+        Dim FFDestinationPath As String = sdbPath + RefPntName.Text + "SDB.txt"
+
         Dim fdstream As Stream
         Dim dassembly As [Assembly]
 
@@ -146,5 +153,8 @@ Public Class ReferencePointForm
 
     End Sub
 
+    Private Sub ReferencePointForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Text = "Reference Point V" & System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()
 
+    End Sub
 End Class
